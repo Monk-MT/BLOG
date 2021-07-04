@@ -1,0 +1,25 @@
+<mxfile>
+    <diagram id="BMjfT9B3cCpIvJEqTosn" name="第 1 页">
+        <mxGraphModel dx="988" dy="575" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontColor=#FFFFFF;dashed=1;" edge="1" parent="1" source="3" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Android层/native_setup" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#FFFFFF;verticalAlign=middle;fontFamily=JetBrains Mono;" vertex="1" parent="1">
+                    <mxGeometry y="50" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=JetBrains Mono;fontColor=#FFFFFF;" edge="1" parent="1" source="7" target="9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="ijkplayer-master\ijkmedia\ijkplayer\android\ijkplayer_jni.c : IjkMediaPlayer_native_setup" style="rounded=0;fontColor=#FFFFFF;verticalAlign=middle;fontFamily=JetBrains Mono;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="50" width="460" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="ijkplayer-master\ijkmedia\ijkplayer\android\ijkplayer_android.c" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=JetBrains Mono;fontColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="50" width="470" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,63 @@
+slice_header() {
+    first_mb_in_slice //片中的第一个宏块的地址
+    slice_type //片的类型
+    pic_parameter_set_id //图像参数集索引号
+    if (separate_colour_plane_flag == 1) //分离颜色平面标志，置1时代表分离
+        colour_plane_id //表示当前是那个颜色平面，取值0，1，2，对应Y,Cb,Cr
+    frame_num //指明了各图像的解码顺序。
+    //当参数集中的句法元素 gaps_in_frame_num_value_allowed_flag 不为 1 时，即frame_num连续的情况下，frame_num数值为前一个参考帧（I帧 或 P帧）的值加1，P帧也可做参考帧
+    if (!frame_mbs_only_flag) {
+        field_pic_flag
+        if (field_pic_flag)
+            bottom_field_flag
+    }
+    if (IdrPicFlag)
+        idr_pic_id
+    if (pic_order_cnt_type == 0) {
+        pic_order_cnt_lsb
+        if (bottom_field_pic_order_in_frame_present_flag && !field_pic_flag)
+            delta_pic_order_cnt_bottom
+    }
+    if (pic_order_cnt_type = = 1 && !delta_pic_order_always_zero_flag) {
+        delta_pic_order_cnt[0]
+        if (bottom_field_pic_order_in_frame_present_flag && !field_pic_flag)
+            delta_pic_order_cnt[1]
+    }
+    if (redundant_pic_cnt_present_flag)
+        redundant_pic_cnt
+    if (slice_type = = B)
+        direct_spatial_mv_pred_flag
+    if (slice_type == P || slice_type == SP || slice_type == B) {
+        num_ref_idx_active_override_flag
+        if (num_ref_idx_active_override_flag) {
+            num_ref_idx_l0_active_minus1
+            if (slice_type == B)
+                num_ref_idx_l1_active_minus1
+        }
+    }
+    if (nal_unit_type == 20)
+        ref_pic_list_mvc_modification() /* specified in Annex H */
+    else
+        ref_pic_list_modification()
+    if ((weighted_pred_flag && (slice_type == P || slice_type == SP)) || (weighted_bipred_idc == 1 &&slice_type == B))
+        pred_weight_table()
+    if (nal_ref_idc != 0)
+        dec_ref_pic_marking()
+    if (entropy_coding_mode_flag && slice_type != I && slice_type != SI)
+        cabac_init_idc
+    slice_qp_delta
+    if (slice_type == SP || slice_type == SI) {
+        if (slice_type == SP)
+            sp_for_switch_flag
+        slice_qs_delta
+    }
+    if (deblocking_filter_control_present_flag) {
+        disable_deblocking_filter_idc
+        if (disable_deblocking_filter_idc != 1) {
+            slice_alpha_c0_offset_div2
+            slice_beta_offset_div2
+        }
+    }
+    if (num_slice_groups_minus1 > 0 && slice_group_map_type >= 3 && slice_group_map_type <= 5)
+        slice_group_change_cycle
+}

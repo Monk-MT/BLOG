@@ -1,0 +1,25 @@
+<mxfile>
+    <diagram id="KhGh48gbBZt5sRaYys5X" name="第 1 页">
+        <mxGraphModel dx="982" dy="575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=JetBrains Mono;" edge="1" parent="1" source="4" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="ff_ffplay.c : stream_component_open&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=JetBrains Mono;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="270" width="210" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=JetBrains Mono;" edge="1" parent="1" source="5" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="ff_ffpipeline.c : ffpipeline_open_video_decoder" style="whiteSpace=wrap;html=1;rounded=1;fontFamily=JetBrains Mono;" vertex="1" parent="1">
+                    <mxGeometry x="665" y="270" width="225" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="ffpipeline_android.c" style="whiteSpace=wrap;html=1;rounded=1;fontFamily=JetBrains Mono;" vertex="1" parent="1">
+                    <mxGeometry x="1022.5" y="270" width="207.5" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
