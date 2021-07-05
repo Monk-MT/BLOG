@@ -9,7 +9,6 @@
     * [H264/](Android/AndroidVideo/H264)
       * [H264 整体概述.md](Android/AndroidVideo/H264/H264整体概述/H264整体概述.md)
       * [NALU 解析.md](Android/AndroidVideo/H264/NALU解析/NALU解析.md)
-      * [片类型.png](Android/AndroidVideo/H264/片解析/片类型.png)
     * [ijkplayer/](Android/AndroidVideo/ijkplayer)
       * [ijkplayer 学习一：编译.md](Android/AndroidVideo/ijkplayer/ijkplayer学习一：编译/ijkplayer学习一：编译.md)
       * [ijkplayer 学习二：运行 Demo 并集成到项目.md](Android/AndroidVideo/ijkplayer/ijkplayer学习二：运行Demo并集成到项目/ijkplayer学习二：运行Demo并集成到项目.md)

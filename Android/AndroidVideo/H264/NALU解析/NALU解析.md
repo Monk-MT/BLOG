@@ -51,7 +51,7 @@ tips:
 
 ## NALU payload
 
-NALU 的主体涉及到三个重要的名词，分别为 EBSP、RBSP 和 SODB。其中 EBSP 完全等价于 NALU 主体，而且它们三个的结构关系为** EBSP 包含 RBSP，RBSP 包含 SODB**。
+NALU 的主体涉及到三个重要的名词，分别为 EBSP、RBSP 和 SODB。其中 EBSP 完全等价于 NALU 主体，而且它们三个的结构关系为**EBSP 包含 RBSP，RBSP 包含 SODB**。
 
 EBSP = RBSP 中插入防竞争码 0x03:
 
@@ -118,7 +118,7 @@ Slice 叫做片（条带） ，可分为 I 片，B 片，P 片，后又补充了
 
 ### IDR
 
-即时解码刷新图像 IDR(instantaneous decoding refresh picture) 是一个特殊的 I 帧，IDR 帧的作用是立刻刷新。在 IDR 帧之后的所有帧都不能引用任何 IDR 帧之前的帧的内容，与此相反，对于普通的 I 帧来说，位于其之后的 B- 和 P- 帧可以引用位于普通 I- 帧之前的 I- 帧。使用 IDR 帧可以防止解码错误的持续传播。
+即时解码刷新图像 IDR(instantaneous decoding refresh picture) 是一个特殊的 I 帧，IDR 帧的作用是立刻刷新。在 IDR 帧之后的所有帧都不能引用任何 IDR 帧之前的帧的内容，与此相反，对于普通的 I 帧来说，位于其之后的 B 和 P 帧可以引用位于普通 I 帧之前的 I 帧。使用 IDR 帧可以防止解码错误的持续传播。
 
 关于各帧的详细作用参考如下文章：
 [图像和流媒体 -- I 帧，B 帧，P 帧，IDR 帧的区别](https://blog.csdn.net/qq_29350001/article/details/73770702)
