@@ -1,0 +1,147 @@
+<mxfile>
+    <diagram id="eZfy59tImp3R4qeZ7hUe" name="第 1 页">
+        <mxGraphModel dx="2343" dy="863" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="16" value="Activity" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="37" y="70" width="200" height="430" as="geometry">
+                        <mxRectangle x="460" y="300" width="130" height="23" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="startActivity" style="rounded=0;whiteSpace=wrap;html=1;" parent="16" vertex="1">
+                    <mxGeometry x="40" y="50" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="startActivityForResult" style="whiteSpace=wrap;html=1;rounded=0;" parent="16" vertex="1">
+                    <mxGeometry x="25" y="190" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="16" source="17" target="19" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="19" target="23" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Instrumentation" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="237" y="70" width="200" height="430" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="execStartActivity" style="whiteSpace=wrap;html=1;rounded=0;" parent="22" vertex="1">
+                    <mxGeometry x="31" y="190" width="138" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="ATMS" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="637" y="70" width="200" height="430" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="startActivity" style="whiteSpace=wrap;html=1;rounded=0;" parent="25" vertex="1">
+                    <mxGeometry x="40" y="190" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="startActivityAsUser" style="whiteSpace=wrap;html=1;rounded=0;" parent="25" vertex="1">
+                    <mxGeometry x="40" y="330" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="25" source="26" target="30" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Binder" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="73" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-50" y="240" as="sourcePoint"/>
+                        <mxPoint x="520" y="370" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="34" value="ActivityStack" style="swimlane;startSize=23;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="70" width="200" height="850" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="startActivityMayWait" style="whiteSpace=wrap;html=1;rounded=0;" parent="34" vertex="1">
+                    <mxGeometry x="17.5" y="330" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="&lt;span&gt;startActivityLocked&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="34">
+                    <mxGeometry x="40" y="470" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="34" source="35" target="76">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="&lt;span&gt;startActivityUncheckedLocked&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="34">
+                    <mxGeometry x="15" y="610" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="34" source="76" target="78">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="startSpecificActivityLocked" style="whiteSpace=wrap;html=1;rounded=0;" parent="34" vertex="1">
+                    <mxGeometry x="25" y="750" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="30" target="35" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="Vertical Container" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="1250" y="70" width="200" height="850" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="45" source="43" target="46" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="resumeTopActivitiesLocked" style="whiteSpace=wrap;html=1;rounded=0;" parent="45" vertex="1">
+                    <mxGeometry x="20" y="610" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="resumeTopActivityInnerLocked" style="whiteSpace=wrap;html=1;rounded=0;" parent="45" vertex="1">
+                    <mxGeometry x="15" y="750" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="48" target="50" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="46" target="48" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="Binder" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="50" target="53" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="realstartActivityLocked" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1090" y="960" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="ApplicationThread" style="swimlane;startSize=23;" parent="1" vertex="1">
+                    <mxGeometry x="-240" y="110" width="241" height="1110" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="scheduleLaunchActivity" style="whiteSpace=wrap;html=1;rounded=0;" parent="52" vertex="1">
+                    <mxGeometry x="60.5" y="750" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="sendMessage(H.LAUNCH_ACTIVITY)" style="whiteSpace=wrap;html=1;rounded=0;" parent="52" vertex="1">
+                    <mxGeometry x="15.5" y="890" width="210" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="52" source="53" target="55" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="H(handle)" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="-446" y="110" width="207" height="1110" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="sendMessage" style="whiteSpace=wrap;html=1;rounded=0;" parent="57" vertex="1">
+                    <mxGeometry x="43.5" y="890" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="55" target="58" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="60" target="63" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="handleMessage" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="-402.5" y="1140" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="取出message" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="58" target="60" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="ActivityThead" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="-710" y="70" width="730" height="1350" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="handleLaunchActivity" style="whiteSpace=wrap;html=1;rounded=0;" parent="62" vertex="1">
+                    <mxGeometry x="70" y="1070" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="IActivityTaskManager" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="437" y="70" width="200" height="430" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="startActivity" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="72">
+                    <mxGeometry x="40" y="190" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="23" target="73">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="78" target="43">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

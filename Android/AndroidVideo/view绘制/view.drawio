@@ -1,0 +1,81 @@
+<mxfile>
+    <diagram id="A9Te0ezC0jfQsvVVHqiQ" name="第 1 页">
+        <mxGraphModel dx="1060" dy="1959" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="2" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="ActivityThread.handleResumeActivity&lt;br&gt;触发绘制流程" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="150" width="230" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="ActivityThread" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="-340" width="250" height="1100" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="handleLaunchActivity&lt;br&gt;创建Activity" style="rounded=0;whiteSpace=wrap;html=1;" parent="3" vertex="1">
+                    <mxGeometry x="65" y="60" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="WindowManagerImpl" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="-340" width="250" height="1100" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="VM.addView&lt;br&gt;添加DecorView" style="whiteSpace=wrap;html=1;rounded=0;" parent="4" vertex="1">
+                    <mxGeometry x="65" y="490" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="WindowManagerGlobal" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="-340" width="250" height="1100" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="mGlobal.addView&lt;br&gt;添加DecorView" style="whiteSpace=wrap;html=1;rounded=0;" parent="7" vertex="1">
+                    <mxGeometry x="65" y="490" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="5" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="8" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="890" y="185" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="创建ViewRootImpl" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="755" y="290" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="ViewRootImpl" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="940" y="-340" width="250" height="1100" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="root.setView&lt;br&gt;DecorView和Window绑定，启动绘制" style="whiteSpace=wrap;html=1;rounded=0;" parent="12" vertex="1">
+                    <mxGeometry x="45" y="490" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="requestLayout&lt;br&gt;判断是否在主线程&amp;nbsp;" style="whiteSpace=wrap;html=1;rounded=0;" parent="12" vertex="1">
+                    <mxGeometry x="65" y="630" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="12" source="14" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="scheduleTraversals" style="whiteSpace=wrap;html=1;rounded=0;" parent="12" vertex="1">
+                    <mxGeometry x="65" y="775" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="12" source="16" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="DecorView" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="1190" y="-340" width="250" height="1100" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="View.assignParent(this)&lt;br&gt;DecorView指定ViewRootImpl为父类" style="whiteSpace=wrap;html=1;rounded=0;" parent="22" vertex="1">
+                    <mxGeometry x="20" y="490" width="210" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="14" target="20" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="创建DecorView" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="255" y="-140" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="26" target="27" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
